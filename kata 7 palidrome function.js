@@ -4,7 +4,6 @@ function isPali(a = '') {
  b = b.join('');
  b = b.toLowerCase();
  let bLength = b.length;
- console.log(b, bLength)
  return bLength%2 === 0 ? compare(b, bLength) : compare(b, bLength, true);
 
  function compare(a, aLength, toEqualizeIt = false) {
@@ -12,7 +11,6 @@ function isPali(a = '') {
   let second = revo(a.slice(
     toEqualizeIt ? aLength/2+1 : aLength/2,
     aLength));
-  console.log(first, second);
   return first === second;
  }
 }
